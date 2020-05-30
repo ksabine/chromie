@@ -15,6 +15,8 @@ scheduler_interval = 1.0 / int(calls_per_second)
 
 
 def call_api():
+    scheduler.enter(scheduler_interval, 1, call_api)
+
     response = requests.get(endpoint)
     elapsed = response.elapsed.total_seconds()
     status_code = response.status_code
@@ -31,7 +33,7 @@ def call_api():
 
     print(json.dumps(log_object))
 
-    scheduler.enter(scheduler_interval, 1, call_api)
+
 
 
 if __name__ == '__main__':
