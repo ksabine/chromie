@@ -1,0 +1,12 @@
+version: "3"
+services:
+  time-keeper:
+    build: time-keeper/
+    ports:
+      - "80:80"
+  time-tester:
+    build: time-tester/
+    environment:
+      - CALLS_PER_SECOND=50
+    links:
+      - time-keeper
