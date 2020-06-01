@@ -34,8 +34,6 @@ def call_api():
     print(json.dumps(log_object))
 
 
-
-
 if __name__ == '__main__':
     scheduler.enter(scheduler_interval, 1, call_api)
     scheduler.run()
