@@ -1,7 +1,9 @@
 ### Chromie Time Keeper Application
 
 ### time-keeper
-Containerized web API with a singular, root endpoint (`http://localhost/`) that will return the current UTC datetime in ISO format
+Containerized web API with a singular, root endpoint (`http://localhost/`) that will return the current UTC datetime in ISO format in JSON
+
+Example: `{"datetime_utc":"2020-06-01T15:49:26.364353"}`
 
 OpenAPI / Swagger spec available at http://localhost/docs
 
